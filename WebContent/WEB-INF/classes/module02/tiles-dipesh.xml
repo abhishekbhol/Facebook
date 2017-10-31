@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<!-- Tiles definitions goes here -->
+<tiles-definitions>
+	<definition name="loginPage" extends="baseLayout2">
+		<put-attribute name="body" value="/login.jsp"/>
+	</definition>
+	
+	<definition name="success" extends="baseLayout">
+		<put-attribute name="body" value="/success.jsp"/>
+	</definition>
+	
+	<definition name="error" extends="baseLayout2">
+		<put-attribute name="body" value="/LoginError.jsp"/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="footer" value=""/> 
+	</definition>
+	
+	<definition name="fillOutInfo" extends="baseLayout">
+		<put-attribute name="body" value="/FillOutInfo.jsp"/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="footer" value=""></put-attribute>
+	</definition>
+	
+	<definition name="step1" extends="baseLayout">
+		<put-attribute name="body" value="/AddProfilePic.jsp"/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="footer" value=""></put-attribute>
+	</definition>
+	
+	
+	<definition name="forgot" extends="baseLayout2">
+		<put-attribute name="body" value="/Forgot.jsp"/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="footer" value=""/>
+		<put-attribute name="title" value=""/>
+	</definition>
+	
+	
+	<definition name="backstep1" extends="baseLayout">
+		<put-attribute name="body" value="/FillOutInfo.jsp"/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="footer" value=""></put-attribute>
+	</definition>
+	
+	<definition name="gotostep2" extends="baseLayout">
+		<put-attribute name="body" value="/AddProfilePic.jsp"/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="footer" value=""></put-attribute>
+	</definition>	
+	
+	<definition name="addprofilepic" extends="baseLayout">
+		<put-attribute name="body" value="/wallPost.jsp"/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="footer" value=""></put-attribute>
+	</definition>
+	
+	<definition name="wallPost" extends="baseLayout">
+		<put-attribute name="body" value="/wallPost.jsp"/>
+	</definition>
+	
+	<definition name="profilepage" extends="baseLayout3">
+		<put-attribute name="body" value="/userWallPosts.jsp"/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="footer" value=""/>
+	</definition>
+	
+	<definition name="friendspage" extends="baseLayout3">
+		<put-attribute name="body" value="/Friends.jsp"/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="footer" value=""/>
+	</definition>
+	
+	<definition name="addcoverpic" extends="baseLayout">
+		<put-attribute name="body" value="/Friends.jsp"/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="footer" value=""/>
+	</definition>
+	
+	<definition name="gotohomepage" extends="baseLayout">
+		<put-attribute name="body" value="/wallPost.jsp"/>
+	</definition>
+</tiles-definitions>

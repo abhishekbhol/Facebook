@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>Facebook</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<listener>
+		<listener-class>org.apache.struts2.tiles.StrutsTilesListener</listener-class>
+	</listener>
+
+	<context-param>
+		<param-name>org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>
+		<param-value>/WEB-INF/classes/tiles.xml,/WEB-INF/classes/module01/tiles-abhishek.xml,/WEB-INF/classes/module02/tiles-dipesh.xml,/WEB-INF/classes/module03/tiles-divya.xml,/WEB-INF/classes/module04/tiles-monika.xml,/WEB-INF/classes/module05/tiles-nisha.xml,/WEB-INF/classes/module06/tiles-prakash.xml,/WEB-INF/classes/module07/tiles-satya.xml,/WEB-INF/classes/module08/tiles-tuli.xml</param-value>
+	</context-param>
+</web-app>

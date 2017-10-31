@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="prakash" namespace="/module06" extends="tiles-default,json-default">
+		<!-- All action Mappings will go over here -->
+		<!-- Ajax Actions -->
+		<action name="acceptFriendRequest" class="iiitb.fb.actions.NotificationsAction" method="acceptFriendRequest">
+		    <result type="json" name="success"></result>
+		</action>
+		<action name="rejectFriendRequest" class="iiitb.fb.actions.NotificationsAction" method="rejectFriendRequest">
+		    <result type="json" name="success"></result>
+		</action>
+		
+		<action name="updateNotificationClicked" class="iiitb.fb.actions.NotificationsAction" method="updateNotificationClicked">
+		    <result type="json" name="success"></result>
+		</action>
+		<action name="updateFriendClickedTimestamp" class="iiitb.fb.actions.NotificationsAction" method="updateFriendClickedTimestamp">
+		    <result type="json" name="success"></result>
+		</action>
+		<action name="updateMessageClickedTimestamp" class="iiitb.fb.actions.NotificationsAction" method="updateMessageClickedTimestamp">
+		    <result type="json" name="success"></result>
+		</action>
+		<action name="loadLikes" class="iiitb.fb.actions.LikeAjaxAction" method="loadLikes">
+		    <result type="json" name="success"></result> 
+		</action>
+	
+		<action name="addWallPost" class="iiitb.fb.actions.WallPostAjaxAction"
+			method="addWallPost">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="likePost" class="iiitb.fb.actions.LikeAction" method="likeWallPost">
+		    <result name="success" type="json"></result>
+		</action>
+
+		<action name="commentWallPost" class="iiitb.fb.actions.CommentAction" method="commentWallPost">
+		    <result name="success" type="json"></result>
+		</action>
+		
+		<action name="unlikePost" class="iiitb.fb.actions.LikeAction" method="unlikeWallPost">
+		    <result name="success" type="json"></result>
+		</action>
+		<action name="loadNotifications" class="iiitb.fb.actions.NotificationsAction" method="loadNotifications">
+		    <result name="success" type="json"></result>
+		</action>
+		
+		<action name="deleteWallPost" class="iiitb.fb.actions.WallPostAction" method="deleteWallPost">
+		    <result name="success" type="json"></result>
+		</action>
+		
+		<action name="loadSingleNotification" class="iiitb.fb.actions.NotificationsAction" method="loadSingleNotification">
+		    <result name="loadWallpost" type="tiles">loadSingleWallPost</result>
+		    <result name="loadProfile" type="tiles">profilepage</result>
+		    <result name="error">/error.jsp</result>
+		    
+		</action>
+		
+		
+	</package>
+</struts>

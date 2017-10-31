@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="dipesh" namespace="/module02" extends="tiles-default,json-default">
+		<!-- All action Mappings will go over here -->
+		<action name="redirectLogin" class="iiitb.fb.actions.Success" method="execute">
+		    <interceptor-ref name="cookie">
+      			<param name="cookiesName">details</param>
+  			 </interceptor-ref>
+		    <result name="homePage" type="tiles">loginPage</result>
+			<result name="success" type="redirect">loadWall</result>
+			<result name="error" type="tiles">error</result>
+		</action>
+		<action name="logout" class="iiitb.fb.actions.LoginAction" method="logout">
+		    <result name="success" type="tiles">loginPage</result>
+		</action>
+		<action name="userLogin" class="iiitb.fb.actions.LoginAction" method="login">
+			<result name="success" type="redirect">loadWall</result>
+			<result name="error" type="tiles">error</result>
+		</action>
+		
+		<action name="loadWall" class="iiitb.fb.actions.WallPostAction" method="getWallPosts">
+			<result name="success" type="tiles">wallPost</result>
+			<result name="error">error</result>
+		</action>
+		
+		<action name="signup" class="iiitb.fb.actions.LoginAction" method="registration">
+			<result name="success" type="tiles">fillOutInfo</result>
+			<result name="error" type="tiles">loginPage</result>
+		</action>
+		
+		<action name="skipstep1" class="iiitb.fb.actions.LoginAction" method="skipStep1">
+			<result name="success" type="tiles">step1</result>
+		</action>
+		
+		
+		<action name="forgotPassword" class="iiitb.fb.actions.Success" method="forgotPassword">
+			<result name="success" type="tiles">forgot</result>
+		</action>
+		
+		<action name="sendEmail" class="iiitb.fb.actions.Emailer">
+		     <result name="success" type="tiles">forgot</result>
+		     <result name="error" type="tiles">forgot</result>
+		</action>     
+		
+		<action name="backtostep1" class="iiitb.fb.actions.LoginAction" method="backToStep1">
+			<result name="success" type="tiles">backstep1</result>
+		</action>
+		
+		<action name="filloutinfo" class="iiitb.fb.actions.LoginAction" method="addProfileInfo">
+			<result name="success" type="tiles">gotostep2</result>
+		</action>
+		
+		<action name="addprofilepic" class="iiitb.fb.actions.LoginAction" method="addProfilePic">
+			<result name="success" type="tiles">addprofilepic</result>
+			<result name="error" type="tiles">gotostep2</result>
+		</action>
+		
+		<action name="skipstep2" class="iiitb.fb.actions.LoginAction" method="skipStep2">
+			<result name="success" type="redirect">loadWall</result>
+		</action>
+		
+		<action name="gotoprofilepage" class="iiitb.fb.actions.LoadProfileAction" method="timepass">
+			<result name="success" type="tiles">profilepage</result>
+		</action>
+		
+		<action name="reloadprofile" class="iiitb.fb.actions.Success" method="profile">
+			<result name="success" type="tiles">profilepage</result>
+		</action>
+		
+		<action name="friends" class="iiitb.fb.actions.FriendsAction" method="getFriends">
+			<result name="success" type="tiles">friendspage</result>
+		</action>
+		
+		<action name="displayfriends" class="iiitb.fb.actions.FriendsAction" method="getFriends">
+			<result name="success" type="tiles">friendspage</result>
+		</action>
+		
+		<action name="uploadcoverpic" class="iiitb.fb.actions.LoginAction" method="addCoverPic">
+			<result name="success" type="tiles">addcoverpic</result>
+		</action>
+		
+		<action name="gotohomepage" class="iiitb.fb.actions.LoginAction" method="addCoverPic">
+			<result name="success" type="tiles">gotohomepage</result>
+		</action>
+		
+		<action name="loadProfilePage" class="iiitb.fb.actions.LoadProfileAction" method="loadProfile">
+			<result name="success" type="tiles">profilepage</result>
+		</action>
+		
+		<action name="searchAction" class="iiitb.fb.actions.SearchAction" method="search">
+			<result name="success" type="json">wallPost</result>
+		</action>
+		
+		<action name="peopleYouMayKnow" class="iiitb.fb.actions.PeopleYouMayKnowAction" method="peopleYouMayKnow">
+			<result name="success" type="json">wallPost</result>
+		</action>
+		
+		<action name="friendRequest" class="iiitb.fb.actions.FriendsAction" method="sendFriendRequest">
+			<result name="success" type="json">wallPost</result>
+		</action>
+		
+		<action name="peopleYouMayKnowFriendRequest" class="iiitb.fb.actions.FriendsAction" method="peopleYouMayKnowSendRequest">
+			<result name="success" type="json">wallPost</result>
+		</action>
+		
+		
+		<action name="canclefriendRequest" class="iiitb.fb.actions.FriendsAction" method="cancleFriendRequest">
+			<result name="success" type="json">wallPost</result>
+		</action>
+		
+		
+		<action name="getTodaysBirthDay" class="iiitb.fb.actions.BirthdayNotAction" method="getTodaysBirthday">
+			<result name="success" type="json">wallPost</result>
+		</action>
+		
+		
+	</package>
+</struts>

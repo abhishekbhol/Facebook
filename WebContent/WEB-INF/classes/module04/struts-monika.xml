@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="monika" namespace="/module04" extends="tiles-default,json-default">
+		<!-- All action Mappings will go over here -->
+		<action name="redirectLogin" class="iiitb.fb.actions.Success"
+			method="execute">
+			<result name="success" type="tiles">loginPage</result>
+			<result name="error" type="tiles">error</result>
+		</action>
+		
+		<action name="settings" class="iiitb.fb.actions.SettingsAction"
+			method="getGeneralSetting">
+			<result name="success" type="tiles">settingsPage</result>
+			<result name="error" type="tiles">error</result>
+		</action>
+		
+		<action name="nameupdate" class="iiitb.fb.actions.SettingsAction"
+			method="updateName">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<action name="usernameupdate" class="iiitb.fb.actions.SettingsAction"
+			method="updateUserName">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<action name="emailupdate" class="iiitb.fb.actions.SettingsAction"
+			method="updateEmail">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<action name="emailremove" class="iiitb.fb.actions.SettingsAction"
+			method="removeEmail">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<action name="updatepass" class="iiitb.fb.actions.SettingsAction"
+			method="updatePass">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<action name="updatelang" class="iiitb.fb.actions.SettingsAction"
+			method="updateLang">
+			<result name="success" type="json"></result>
+		</action>
+		
+		
+		<action name="privacySettings" class="iiitb.fb.actions.SettingsAction"
+			method="getPrivacySetting">
+			<result name="success" type="tiles">privacySettings</result>
+			<result name="error" type="tiles">error</result>
+		</action>
+		
+		<action name="viewupdate" class="iiitb.fb.actions.SettingsAction"
+			method="updateViewSetting">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<action name="friendrequpdate" class="iiitb.fb.actions.SettingsAction"
+			method="updateFriendreqSetting">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<action name="msgupdate" class="iiitb.fb.actions.SettingsAction"
+			method="updateMsgSetting">
+			<result name="success" type="json"></result>
+		</action>	
+		
+	</package>
+</struts>

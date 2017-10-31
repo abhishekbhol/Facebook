@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<!-- Definitions Goes here -->
+	<definition name="categorylink" extends="baseLayout">
+		<put-attribute name="body" value="/DisplayFriendCat.jsp" />
+	</definition>
+	
+	<definition name="categoryPage" extends="baseLayout">
+		<put-attribute name="body" value="/specificCategory.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<!-- Definitions Goes here -->
+	<definition name="success" extends="baseLayout">
+		<put-attribute name="body" value="/success.jsp" />
+	</definition>
+
+<definition name="EditProfileDisplay" extends="baseLayout3">
+		<put-attribute name="body" value="/EditProfileDisplay.jsp"/>
+	</definition>
+
+
+</tiles-definitions>

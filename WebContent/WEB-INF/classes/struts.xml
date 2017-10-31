@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="tiles-default">
+	    <action name="updateProfilePicture" class="iiitb.fb.actions.UpdateProfilePicAction" method="execute">
+		    <interceptor-ref name="fileUpload">
+		        <param name="maximumSize">2097152</param>
+		        <param name="allowedTypes">
+		             image/png,image/gif,image/jpeg,image/pjpeg	
+		        </param>
+		        
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+		    <result name="success" type="chain">
+		        <param name="namespace">/module02</param>
+		        <param name="actionName">gotoprofilepage</param>
+		    </result>
+		</action>
+		<action name="updateCoverPicture" class="iiitb.fb.actions.UpdateProfilePicAction" method="updateCoverPicture">
+		    <interceptor-ref name="fileUpload">
+		        <param name="maximumSize">2097152</param>
+		        <param name="allowedTypes">
+		             image/png,image/gif,image/jpeg,image/pjpeg	
+		        </param>
+		        
+		    </interceptor-ref>
+		    <interceptor-ref name="defaultStack"></interceptor-ref>
+		    <result name="success" type="chain">
+		        <param name="namespace">/module02</param>
+		        <param name="actionName">gotoprofilepage</param>
+		    </result>
+		</action>
+	</package>
+
+	<include file="module01/struts-abhishek.xml"></include>
+	<include file="module02/struts-dipesh.xml"></include>
+	<include file="module03/struts-divya.xml"></include>
+	<include file="module04/struts-monika.xml"></include>
+	<include file="module05/struts-nisha.xml"></include>
+	<include file="module06/struts-prakash.xml"></include>
+	<include file="module07/struts-satya.xml"></include>
+	<include file="module08/struts-tuli.xml"></include>
+
+</struts>

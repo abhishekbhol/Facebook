@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<!-- Definitions Goes here -->
+	<definition name="success" extends="baseLayout">
+		<put-attribute name="body" value="/success.jsp" />
+	</definition>
+	
+	<definition name="settingsPage" extends="baseLayout">
+		<put-attribute name="body" value="/settings.jsp" />
+	</definition>
+	
+	<definition name="privacySettings" extends="baseLayout">
+		<put-attribute name="body" value="/privacySettings.jsp" />
+	</definition>
+	
+</tiles-definitions>

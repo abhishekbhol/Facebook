@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<!-- Definitions Goes here -->
+	<definition name="success" extends="baseLayout">
+		<put-attribute name="body" value="/success.jsp"/>
+	</definition>
+	
+	<definition name="messagePage" extends="baseLayout">
+		<put-attribute name="body" value="/message.jsp"/>
+	</definition>
+	
+	<definition name="errorPage" extends="baseLayout">
+		<put-attribute name="body" value="/error.jsp"/>
+	</definition>
+	
+	<definition name="newMessagePage" extends="baseLayout">
+		<put-attribute name="body" value="/newMessage.jsp"/>
+	</definition>
+	
+	
+	
+	
+</tiles-definitions>
